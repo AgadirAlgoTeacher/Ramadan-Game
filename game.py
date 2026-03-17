@@ -22,7 +22,6 @@ GuySpeed = 5
 
 FoodPosx = 100
 FoodPosy = 100
-Food_speed = 10
 
 game = True
 
@@ -46,10 +45,7 @@ while game:
     if keys[K_DOWN] and GuyPosy < SCREEN_HEIGHT - GuySize[1]:
         GuyPosy += GuySpeed
         
-    #move food
-    FoodPosx += Food_speed
-    if FoodPosx > SCREEN_WIDTH or FoodPosx < 0:
-        Food_speed = -Food_speed
+
 
     window.blit(background, (0, 0))
     window.blit(Guy, (GuyPosx, GuyPosy))
